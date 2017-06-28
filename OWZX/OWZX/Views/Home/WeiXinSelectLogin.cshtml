@@ -1,0 +1,25 @@
+﻿@{
+    Layout = null;
+}
+<title>授权登录云销二当家 - @ViewBag.CompanyName </title>
+<link href="/modules/css/base.css" rel="stylesheet" />
+<link href="/modules/css/default/layout.css" rel="stylesheet" />
+<link href="/modules/css/home/selectlogin.css" rel="stylesheet" />
+
+<div class="header">
+    <img class="left mTop2" style="width:25px; height:25px;" src="@(string.IsNullOrEmpty(ViewBag.Logo)?"/modules/images/ico-changmenghover.png":ViewBag.Logo)" />
+    <span class="left mLeft10">@ViewBag.CompanyName</span>
+    <span></span>
+    <div class="clear"></div>
+</div>
+<div class="select-login center">
+    <div class="header-txt">
+        您的微信尚未绑定<span class="bolder">云销二当家</span>账号
+    </div>
+    <div class="header-title">
+        请选择绑定已有帐户，或创建新账户
+    </div>
+    <div class="btn-bind btn-btn" onclick="location.href='/Home/Login?BindAccountType=5'" >绑定已有账户</div>
+    <div class="btn-register btn-btn" onclick="location.href='/Home/WinXinRegisterMember'">注册新账户</div>
+</div>
+

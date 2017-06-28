@@ -1,0 +1,59 @@
+﻿@{ 
+    Layout = null;
+}
+<html>
+<head>
+    <link href="/modules/css/base.css" rel="stylesheet" />
+    <link href="/modules/css/layout.css" rel="stylesheet" />
+    <link href="/modules/css/iconfont/iconfont.css" rel="stylesheet"/>
+    <link href="/modules/plug/umeditor/themes/default/css/umeditor.min.css" rel="stylesheet"/>
+    <link href="/modules/plug/daterangepicker/daterangepicker.css" rel="stylesheet" />
+    <script src="/Scripts/jquery-1.11.1.js"></script>
+    <script type="text/javascript" src="/Scripts/sea.js"></script>
+    <script type="text/javascript" src="/Scripts/sea-config.js"></script>
+    <script src="/modules/plug/umeditor/ueditor.config.js"></script>
+    <script src="/modules/plug/umeditor/umeditor.min.js"></script>
+    <script type="text/javascript">
+        seajs.use(["scripts/sysset/active"], function (obj) {
+            var um = UE.getEditor('remark');
+            obj.init(um);
+        });
+    </script>
+</head>
+<body>
+    <div class="main-body">
+        <div class="main-content">
+            <div class="header-box">
+                <span class="header-title left">当前位置-信息管理</span>
+                <div class="btn-add right" id="createModel">新建信息</div>
+            </div>
+            <div class="search-header"> 
+                <div class="left mRight5" id="activeType"></div>
+                <div class="left" title="创建时间">
+                    <input type="text" id="iptCreateTime" placeholder="有效时间" class="ipt-date"  />
+                </div> 
+                <div class="right searth-module mRight20" data-text="关键字搜索..." data-width="160"> </div>
+            </div>
+            <div class="content-body">
+                <table class="table-list">
+                    <tr class="tr-header">
+                        <td class="tLeft">信息海报</td>
+                        <td class="tLeft">信息名称</td>
+                        <td class="tLeft">信息简要</td>
+                        <td class="tLeft">信息类型</td>
+                        <td class="tLeft">有效时间</td>
+                        <td class="width150">创建时间</td>
+                        <td class="width150">创建人</td>
+                        <td class="width80">操作</td>
+                    </tr>
+                </table>
+                 <div id="pager" class="mTop20"></div>
+            </div>
+            <ul class="dropdown-ul hide" style="width: 65px;">
+                <li class=" " id="updateObject">编辑</li>
+                <li class=" " id="deleteObject">删除</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

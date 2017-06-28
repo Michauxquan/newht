@@ -1,0 +1,67 @@
+﻿@{ 
+    Layout = null;
+    var model = (ProEntity.Active)ViewBag.Model;
+}
+<html>
+<head>
+    <link href="/modules/css/base.css" rel="stylesheet" />
+    <link href="/modules/css/layout.css" rel="stylesheet" />
+    <link href="/modules/css/iconfont/iconfont.css" rel="stylesheet"/>
+    <link href="/modules/plug/umeditor/themes/default/css/umeditor.min.css" rel="stylesheet"/>
+    <link href="/modules/plug/daterangepicker/daterangepicker.css" rel="stylesheet" />
+    <script src="/Scripts/jquery-1.11.1.js"></script>
+    <script  type="text/javascript"  src="/Scripts/DateForm.js"></script>
+    <script type="text/javascript" src="/Scripts/sea.js"></script>
+    <script type="text/javascript" src="/Scripts/sea-config.js"></script>
+    <script src="/modules/plug/umeditor/ueditor.config.js"></script>
+    <script src="/modules/plug/umeditor/umeditor.min.js"></script>
+    <script type="text/javascript">
+        seajs.use(["scripts/sysset/active"], function (obj) {
+            var um = UE.getEditor('actcontent');
+            obj.initAdd('@(model.AutoID)', um, '@Html.ToJSONString(model)');
+        });
+    </script>
+</head>
+<body>
+    <div class="main-body">
+        <div class="main-content">
+             <div class="header-box">
+                 <span class="header-title left">当前位置-编辑信息</span> 
+                 <a class="back right" href="javascript:if(history.length>1){ history.go(-1);} else{}">
+                    <i class="iconfont blue">&#xe62d;</i> 返回
+                </a>
+             </div>
+            <div class="content-body mTop20">
+                <ul class="table-add product-add"  >
+                    <li>
+                        <span class="column-name">信息名称：</span><input type="text" style="width: 300px;" maxlength="50" id="acttitle" data-empty="必填" class="input verify"/>
+                    </li>
+                    <li>
+                        <span class="column-name">信息概要：</span><input type="text" style="width: 300px;" maxlength="200" id="acttips" class="input"/>
+                    </li>
+                     <li>
+                        <span class="column-name left">信息类型：</span><div class ="left" id="acttype1" ></div><div class="clear"></div>
+                    </li>
+                    <li>
+                        <span class="column-name left">信息图片：</span><span id="actimg1" class="left"></span> <div class="clear"></div>
+                    </li>
+                    <li>
+                        <span class="column-name">有效时间：</span><input type="text" id="iptCreateTime1" placeholder="创建时间" class="ipt-date"/>
+                    </li>
+                </ul> 
+                <div style="padding: 0 20px 20px 20px;">
+                    <span class="column-name" style="float: left;">信息详情：</span> 
+                    <div id="actcontent" style="float: left;"></div>
+                    <div class="clear"></div>
+                    <div class="btn mLeft60 mTop20"  id="btnSaveActive">保存</div>
+                </div>
+
+                <div style="padding: 0 20px 20px 80px;">
+                     <input type="text" style="width: 300px;" maxlength="200" id="imgurl" data-empty="必填" hidden="hidden" style="display: none !important;" class=" input verify"/>
+                    <img style="float: left;" class="product-img" id="productImg" style="width: 700px; height: 190px;" alt="" src="/modules/images/default.png"/>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

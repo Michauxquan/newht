@@ -1,0 +1,18 @@
+﻿{%
+	for(var i=0, j=$data.length; i < j; i++){
+	var item = $data[i];
+%}
+<tr class="list-item"> 
+    <td class="tLeft"><a href="/feedback/detail/{%=item.AutoID%}">{%=item.Title%}</a></td>
+    <td class="tLeft">{%=item.Type==1?"问题":item.Type==2?"建议":"需求"%}</td>
+    <td class="tLeft">{%=item.Status==1?"待解决":item.Status==2?"已解决":item.Status==3?"驳回":"删除"%}</td>
+    <td class="tLeft">{%=item.ContactName%}</td>
+    <td class="tLeft">{%=item.MobilePhone%}</td>
+    <td class="tLeft">{%=item.CreateTime.toDate("yyyy-MM-dd hh:mm:ss")%}</td>
+    <td class="tLeft">
+        {%if(item.Status==1){%}
+        <a class="ico-edit" title="编辑" href="/feedback/detail/{%=item.AutoID%}"></a>
+        {%}%}
+    </td>
+</tr>
+{% } %}

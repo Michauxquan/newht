@@ -1,0 +1,42 @@
+﻿{%
+	var model = $data;
+%}
+<div class="add-cart-div">
+    <div class="image left">
+        <img id="productimg" src="{%=model.orderImage%}" />
+    </div>
+    <div class="product-info left">
+        <h1>{%=model.intGoodsCode%}&nbsp;{%=model.goodsName%}</h1>
+        <div class="mTop10" >
+            <ul class="table-add" >
+                <li id="pdttilel" class="hide"></li>
+                <li id="productAttr"></li>
+                <li>
+                    <span class="">价格：</span>
+                    <label class="salesprice" id="price">￥{%=model.finalPrice.toFixed(2)%}</label>
+                </li>
+            </ul>
+            <div class="clear"></div>
+           <!-- <ul class="price-unit">
+              
+                <li class="hide">
+                    
+                </li>
+                <li>
+                     
+                </li>
+            </ul>-->
+        </div>
+        <div class="choose-div">
+            <div class="choose-quantity left">
+                <input type="text" value="1" id="quantity" />
+                <span class="quantity-add" id="quantityadd">+</span>
+                <span class="quantity-reduce" id="quantityreduce">-</span>
+            </div>
+            <div class="left mLeft10">
+                <input type="button" class="addcart" id="addcart" data-name="{%=model.goodsName%}" value="选择产品" />
+            </div>
+        </div>
+    </div>
+</div>
+{% %}

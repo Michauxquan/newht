@@ -1,0 +1,42 @@
+﻿{%
+	for(var i=0, j=$data.length; i < j; i++){
+    var item = $data[i];
+    var titlename=item.intGoodsCode+" "+item.goodsName;
+    var goodname=(titlename.length>17?titlename.substring(0,17)+"...":titlename); 
+%}
+<li >
+    <div class="product-item" style="height: 360px;" >
+        <a class="btn-open-window productimg" title="{%=item.intGoodsCode%}&nbsp;{%=item.goodsName%}" data-url="/IntFactoryOrder/OrdersDetail?orderid={%=item.orderID%}&clientid={%=item.clientID%}" href="javascript:void(0);" data-name="产品详情页-{%=item.goodsName%}" data-orderid="{%=item.orderID%}">
+            <img  src="{%=item.orderImage%}" alt=""/>
+        </a>
+        <h2 class="price">
+            ￥{%=item.finalPrice.toFixed(2)%}
+        </h2>
+        <a class="btn-open-window name" data-url="/IntFactoryOrder/OrdersDetail?orderid={%=item.orderID%}&clientid={%=item.clientID%}" href="javascript:void(0);" data-name="产品详情页-{%=item.goodsName%}" data-orderid="{%=item.orderID%}" title="{%=item.intGoodsCode%}&nbsp;{%=item.goodsName%}">
+            &nbsp;{%=goodname%}
+        </a>
+        <div class="mLeft5 mTop5 " title="员工人数:{%=item.clientName%}">
+            <div class="left mLeft3">
+                <img src="/modules/images/ico-usernum.png" style="width: 16px; height: 16px; display: inline-block;"> 
+            </div> 
+            <div class="left color999 mLeft5" style="height: 16px;">&nbsp;{%=item.clientUserNum%}</div>
+            <div class="clear"></div>
+        </div>
+         <div class="mLeft5 mTop5 " title="所在地:{%=item.clientName%}">
+            <div class="left mLeft3">
+                <img src="/modules/images/ico-address.png" style="width: 16px; height: 16px; display: inline-block;"> 
+            </div> 
+            <div class="left color999 mLeft5" style="height: 16px;">&nbsp;{%=item.clientCity%}</div>
+            <div class="clear"></div>
+        </div>
+         <div class="mLeft5 mTop5 " title="供应商:{%=item.clientName%}">
+            <div class="left mLeft3">
+                <img src="/modules/images/ico-provider.png" style="width: 16px; height: 16px; display: inline-block;"> 
+            </div>
+            
+            <div class="left color999 mLeft5" style="height: 16px;">&nbsp;{%=(item.clientName.length>16?item.clientName.substring(0,16)+"...":item.clientName)%}</div>
+            <div class="clear"></div>
+        </div> 
+    </div>
+</li>
+{% } %}

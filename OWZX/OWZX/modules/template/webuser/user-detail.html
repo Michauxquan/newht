@@ -1,0 +1,23 @@
+﻿
+<ul class="easydialog-create">
+    <li ><span class="left width80">昵    称：</span><input type="text" id="modelName" maxlength="20" class="input verify " data-empty="必填"/></li>
+    <li><span class="left width80">登录账号：</span><input type="text" id="modelEmail" maxlength="20" class="input verify"  maxlength="20" data-empty="必填"/><span id="EailInfo" class="red mLeft10"></span></li>
+    <li class=""><span class="left width80">登录密码：</span><input type="text" id="modelLoginPWD" maxlength="20" class="input verify " data-empty="必填" /><span id="NewPwdError" class="red mLeft10"></span></li>
+    <li class=""><span class="left width80">确认密码：</span><input type="text" id="modelNewConfirmPwd" maxlength="20" class="input verify " data-empty="必填"/><span id="NewConfirmPwdError" class="red mLeft10"></span></li>
+    <li><span class="left width80">类    别：</span><select id="modelUserType" ><option value="0">会员</option><option value="1">代理</option></select></li>
+    <li><span class="left width80">真实姓名：</span><input type="text" id="modelRealName" maxlength="20" class="input"/></li>
+    <li><span class="left width80">身 份 证：</span><input type="text" id="modelIdCard" maxlength="18" class="input"/></li>
+    <li><span class="left width80">性    别：</span>
+        <label><input  class="checkbox Gender" id="modelGender" name="Gender" type="radio" value="0">未知</label>
+        <label><input  class="checkbox Gender" id="modelGender1" name="Gender" type="radio" value="1">男</label>
+        <label><input  class="checkbox Gender" id="modelGender2" name="Gender" type="radio" value="2">女</label>
+    </li> 
+    <li><span class="left width80">手    机：</span><input type="text" id="modelMobilePhone" maxlength="11" class="input"/></li>
+    <li class=""><span class="left width80">Q    Q：</span><input type="text" id="modelQQ" maxlength="11" class="input" /></li>
+    <li><span class="left width80">描    述：</span><textarea id="modelBio"></textarea></li>
+    <li ><span class="left width80">省：</span><input type="text" id="modelProvince" maxlength="11" class="input"/>
+        <input type="text" id="modelCity" maxlength="11" class="input"/>
+        <input type="text" id="modelDistrict" maxlength="11" class="input"/>
+    </li>
+    <li><span class="left width80">详细地址：</span><textarea id="modelAddress"></textarea></li>
+</ul>

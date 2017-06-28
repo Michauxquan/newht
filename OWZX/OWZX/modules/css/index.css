@@ -1,0 +1,154 @@
+﻿
+body { background-color:#f2f4f8; }
+
+/*header样式*/
+header { height:50px; width:100%; background-color:#2F73B8; position:fixed; top:0; z-index:1999; opacity:0.9;}
+
+header .company-logo { margin-top:13px; margin-left:10px; cursor: pointer;}
+header .company-logo img{ float:left; height:26px; }
+header .company-logo div { float:left; width: 168px; font-size:14px; line-height:25px; margin-left:10px; color: #BFD2F2; }
+
+header .company-logo:hover div { color: #fff; }
+
+/*公司名称点击下拉列表*/
+.dropdown-companyinfo { position:fixed; background-color:#fff; width:210px; z-index:1000; border-radius:2px; border:solid 1px #eee;
+                        box-shadow:0 0 5px #ccc; top:50px; left:0px; z-index:2000;}
+.dropdown-companyinfo .top-lump { border-bottom:solid 10px #fff; border-left:solid 12px transparent ;border-right:solid 12px transparent; 
+                                   width:0; height:0; position:absolute; left:90px; top:-9px; }
+.dropdown-companyinfo .items-list { padding:5px 0; overflow:auto; margin:0px 20px;}
+.dropdown-companyinfo .items-list li{ padding:10px 0; width:160px; text-align:center;}
+.dropdown-companyinfo .btn-buy { height:35px; line-height:35px; width:150px; font-size:18px;}
+
+/*一级菜单*/
+header .menu { height:50px; margin-left:30px; }
+header .menu li{ height:50px; line-height:50px; width:90px; text-align:center; display:inline-block; position:relative; cursor:pointer;}
+header .menu .ico{ width:16px; height:16px; margin-top:18px; margin-left:10px; float:left; }
+header .menu .name{ margin-left:5px; color:#BFD2F2; font-size:14px; float:left;}
+header .menu .point { width:6px; height:6px; border-radius:3px; background-color:#f8aa9b; float:left; display:inline-block; margin-top:18px; margin-left:3px; }
+header .menu .cursor {border-bottom:solid 9px #f2f4f8; border-left:solid 10px transparent ;border-right:solid 10px transparent; 
+                                   width:0; height:0; position:absolute; left:35px; bottom:0px; display:none;  }
+header .menu li:hover .name,header .menu .hover .name{ color:#fff;}
+header .menu .hover .cursor{ display:inline-block;}
+
+/*关注店铺*/
+.dropdown-collect-store { position:fixed; background-color:#fff; width:300px; border-radius:2px; border:solid 1px #eee;
+                     box-shadow:0 0 5px #ccc; top:50px; z-index:2000; }
+.dropdown-collect-store .top-lump { border-bottom:solid 10px #fff; border-left:solid 12px transparent ;border-right:solid 12px transparent; 
+                               width:0; height:0; position:absolute; left:50px; top:-9px; }
+.dropdown-collect-store .items-list { padding:5px 0; overflow:auto; max-height:350px; }
+.dropdown-collect-store .items-list .item{ height:35px; line-height:35px; }
+.dropdown-collect-store .items-list .item a{ width:200px; padding-left:20px; height:35px; display:inline-block; font-size:14px; color:#666;}
+.dropdown-collect-store .items-list .item:hover{ background-color:#eee; }
+
+/*登录信息*/
+header .currentuser { margin-right:30px; cursor:pointer;}
+header .currentuser span{ display:inline-block; float:left;}
+header .currentuser .avatar { height:35px; width:35px; border:solid 1px #2F74B9; border-radius:18px; margin-top:7px;}
+header .currentuser .username { margin-left:10px; color:#BFD2F2; line-height:50px; font-size:14px; }
+
+header .currentuser .dropdown { width:16px; height:16px; position:relative; overflow:hidden; margin-left:5px; margin-top:24px; }
+header .dropdown .dropdown-top { border-top:solid 6px #BFD2F2; border-left:solid 6px transparent ;border-right:solid 6px transparent ; }
+header .dropdown .dropdown-bottom { border-top:solid 6px #2F74B9; border-left:solid 6px transparent ;
+                                    border-right:solid 6px transparent; position:absolute; top:-3px; left:0; }
+
+header .currentuser:hover .username{ color:#fff;}
+header .currentuser:hover .dropdown-top{ border-top:solid 6px #fff;}
+
+
+.dropdown-userinfo { position:fixed; background-color:#fff; width:120px; z-index:1000; border-radius:2px; border:solid 1px #eee;
+                     box-shadow:0 0 5px #ccc; top:50px; right:20px; z-index:2000;}
+.dropdown-userinfo .top-lump { border-bottom:solid 10px #fff; border-left:solid 12px transparent ;border-right:solid 12px transparent; 
+                               width:0; height:0; position:absolute; left:50px; top:-9px; }
+.dropdown-userinfo .items-list { padding:5px 0; overflow:auto; }
+.dropdown-userinfo .items-list .item{ height:35px; line-height:35px; float:left; width:120px; }
+.dropdown-userinfo .items-list .item a{ width:70px;padding-left:30px; display:inline-block; font-size:14px; color:#666;}
+.dropdown-userinfo .items-list .item:hover{ background-color:#eee; }
+
+
+/*左侧菜单栏*/
+nav { position:fixed; left:0; top:49px; bottom:0; background-color:#f2f4f8; width:180px; 
+      border-right:solid 1px #ccc; box-shadow:0 0 3px #B5C2CA;z-index:999; opacity:0.9;}
+
+nav .controller { border-top:solid 1px #fff; border-bottom:solid 1px #ddd; padding:10px 0;}
+nav .controller-item {  height:35px; cursor:pointer; text-align:center; }
+nav .controller-item img{ width:16px; height:16px; margin-top:10px; margin-left:40px; float:left; }
+nav .controller-item .name{ font-size:16px; line-height:35px; color:#666; display:inline-block; float:left; margin-left:5px; }
+nav .controller-item .point { width:6px; height:6px; border-radius:3px; background-color:red; float:left; display:inline-block; margin-top:12px; margin-left:3px; }
+
+
+nav .action-items {}
+nav .action-items li { width:180px; height:28px; line-height:28px;  color:#333; text-align:center; cursor:pointer;}
+nav .action-items li .name { position:relative; font-size:13px;}
+nav .action-items li:hover { background-color:#ccc;}
+nav .action-items li:hover ,nav .action-items .hover { color:#4a98e7; }
+
+nav .action-items .hover { background-color:#fff !important; }
+nav .action-items .point { width:6px; height:6px; border-radius:3px; background-color:red; display:inline-block; position:absolute; top:2px; right:-8px; }
+
+/*内容页*/
+.main-content { position:fixed; top:50px; right:0; bottom:0; left:180px;}
+.main-content .window-box { padding-top:17px; border-bottom:solid 1px #fff; height:28px; position:relative; overflow:hidden; }
+
+.main-content .window-box .left-btn, .main-content .window-box .right-btn{ position:absolute; bottom:1px; width:16px; height:27px; background-color:#B5C2CA;
+                                                                            cursor:pointer; display:none; }
+.main-content .window-box .left-btn { left:0px; border-right:solid 4px #f2f4f8;}
+.main-content .window-box .right-btn { right:0px; border-left:solid 4px #f2f4f8;}
+
+.main-content .window-box .left-btn:hover, 
+.main-content .window-box .right-btn:hover{ background-color:#4a98e7; }
+
+.main-content .left-btn span,.main-content .right-btn span{  border-top:solid 8px transparent ;border-bottom:solid 8px transparent; width:0; height:0; display:inline-block; margin-top:5px; }
+.main-content .left-btn span{ border-right:solid 8px #fff; margin-left:3px;}
+.main-content .right-btn span{ border-left:solid 8px #fff; margin-left:7px;}
+
+.main-content .window-items { padding:0 20px; position:absolute; left:0; border-bottom:solid 1px #B5C2CA; height:27px; width:10000px;}
+.main-content .window-items li{  position:relative;  float:left;  background-color:#B5C2CA; cursor:pointer; border:solid 1px #B5C2CA;
+                                 border-radius:3px; border-bottom-left-radius:0; border-bottom-right-radius:0; 
+                                 padding:0 10px; margin-right:5px;  width:100px; height:25px; line-height:26px; color:#fff;
+                                 white-space: nowrap; overflow: hidden; text-overflow: ellipsis;}
+
+.window-items li .iconfont{ color:#fff; }
+
+.window-items li:hover { background-color:#fff; color:#666; height:26px; }
+.window-items li.hover { background-color:#fff; color:#666; height:26px; border-bottom-color:#fff; }
+.window-items li:hover .iconfont,.window-items li.hover .iconfont{ color:#666; }
+
+.window-items li .close { position:absolute; height:12px; line-height:12px; right:2px; top:2px; font-size:12px; }
+
+.main-content .iframe-box { width:100%;  background:url(/modules/images/ico-loading.jpg) no-repeat center 200px; background-color:#fff;}
+
+.main-content .iframe-window { width:100%; height:500px; border:none;  }
+
+/*帮助-意见浮层*/
+.help-feedback { width:40px; height:45px; position:fixed; bottom:20px; left:10px; z-index:1999; overflow:hidden;}
+.help-feedback li { height:40px; width:40px; border-radius:20px; cursor:pointer;  margin-top:5px; position:absolute;}
+.help-feedback li a{ height:40px; width:40px; display:inline-block; }
+.help-feedback li:hover { background-color:#2F73B8;}
+
+.help-feedback .ico-contact {background:url('/modules/images/ico-contact.png') no-repeat center;background-color:#4a98e7;bottom: 90px;}
+.help-feedback .ico-feedback { background:url('/modules/images/ico-feedback.png') no-repeat center; background-color:#4a98e7; bottom:90px;}
+.help-feedback .ico-help { background:url('/modules/images/ico-wechat.png')no-repeat center center; background-size:22px 22px;background-color:#4a98e7; bottom:45px; }
+.help-feedback .ico-help:hover {background-color:#2F73B8;}
+.help-feedback .ico-open { background:url('/modules/images/ico-operate-open.png') no-repeat center; background-color:#4a98e7;  bottom:0; }
+ 
+.wechat { position:fixed;z-index:1000 ;bottom:60px;left:44px;transition:0.7s;-webkit-transition:0.7s;-moz-transition:0.7s;}
+
+.wechat img { z-index:888 ;width:0;height:0;transition:0.7s;-webkit-transition:0.7s;-moz-transition:0.7s;}
+
+
+
+/*授权到期页面*/
+.author-box { width:600px;padding-bottom:10px;}
+.autnor-msg li:first-child { margin-top:20px;}
+.autnor-msg li,.autnor-msg li span { font-size:16px;line-height:40px;}
+.autnor-msg li:last-child { font-size:12px;}
+.author-footer div {display:inline-block;}
+.author-footer .renewal { width:120px;line-height:50px;text-align:center;cursor:pointer;border-radius:5px;font-size:16px;}
+.author-lump { width:10px;height:10px;display:inline-block;border:1px solid #ccc;}
+.author-lump.hover { background-color:#4a98e7;border-color:#4a98e7;}
+.author-footer div:first-child { background-color:#4a98e7;color:#fff;border:1px solid #3a98e7;margin:0 10px 0 360px;}
+
+
+
+
+

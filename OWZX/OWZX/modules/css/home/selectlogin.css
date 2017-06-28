@@ -1,0 +1,39 @@
+﻿body {
+background-color:#ededed;
+}
+/*头部*/
+.header {padding:15px 20px 15px 41px;margin-right:10px; background-size: 26px 26px;
+         line-height:32px;background-color:rgba(255,255,255,0.7);position:fixed;width:100%;box-sizing:border-box;left:0;top:0;
+         z-index:100}
+.header .headerTitle {margin-left: 5px;color: #4a98e7;text-align: center;font-size: 16px;font-weight: bold;line-height: 24px;}
+.header span { font-size:16px;color:#666;display:block;}
+.header span:nth-child(2){margin-top:-2px;}
+.header span:nth-child(2) a{ background-color:#4a98e7;padding: 5px 10px;color:#fff; font-size:14px;border-radius:3px;border: #4a98e7 solid 1px;transition:background-color 0.2s;}
+.header span:nth-child(2) a:hover { background-color:#2f73b8;}
+
+.select-login {width:500px;margin:120px auto;background-color:#fff;border:1px solid #ccc; padding:20px 0 50px 0px;}
+.select-login .header-txt{ font-size:18px; line-height:30px; }
+.select-login .header-txt span{ font-size:18px; padding:0 5px; }
+
+.select-login .header-title{ font-size:14px; line-height:50px; color:#999; }
+
+.select-login .btn-btn { height:40px; line-height:40px; margin:10px auto; width:400px; text-align:center; border-radius:3px;font-size:16px;cursor:pointer; }
+.btn-register{color:#666;border: solid 1px #ccc; background-color:#ffffff;}
+.btn-bind{ color:#fff;background-color:#5d9cec;border: solid 1px #5d9cec;}
+
+.select-login .btn-btn:hover { background-color:#2F73B8;color: #fff; border: solid 1px #2F73B8;}
+
+@media only screen and ( max-width:450px) {
+    .select-login {
+    width:340px;
+    margin:100px auto;
+    }
+
+    .ali-login,.bind-account {
+    padding:30px 15px 20px 15px;
+    }
+
+    .ali-login img,.bind-account  img{
+    max-width:100px;
+    }
+}

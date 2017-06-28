@@ -1,0 +1,18 @@
+﻿
+@foreach (OWZXEntity.Menu model in ExpandClass.GetChildMenuByCode(HttpContext.Current, ViewBag.MenuCode))
+{ 
+    <div class="controller" data-code="@(model.MenuCode)">
+        <div class="controller-item">
+            <img src="@(string.IsNullOrEmpty(model.IcoPath)?"/Content/menuico/default-menu.png":model.IcoPath)" />
+            <span class="name left">@(model.Name)</span>
+        </div>
+        <ul class="action-items">
+            @foreach (OWZXEntity.Menu view in ExpandClass.GetChildMenuByCode(HttpContext.Current, model.MenuCode))
+            {
+                <li data-url="/@(view.Controller + "/" + view.View)" data-name="@(view.Name)" data-code="@(view.MenuCode)">
+                    <span class="name">@(view.Name)</span>
+                </li>
+            }
+        </ul>
+    </div>
+}

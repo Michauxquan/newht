@@ -1,0 +1,69 @@
+﻿
+
+/*单位*/
+.unit-list li{ height:30px; line-height:30px; width:80px;  float:left; margin:10px 10px;  text-align:center; position:relative;  }
+.unit-list li input{ height:28px; line-height:30px; width:50px; padding:0 15px; text-align:center; border:solid 1px #ccc; cursor:pointer; }
+.unit-list li .ico-delete{ position:absolute; right:-9px; top:-9px; display:none; background-color:white; }
+.unit-list li:hover .ico-delete{ display:inline-block; }
+.unit-list .unit-item:hover input{ border:solid 1px #318ae4; }
+
+/*属性值*/
+.attr-value-box { border:solid 1px #ccc; box-shadow:0 0 5px #ccc; width:300px; overflow-x:hidden; overflow-y:auto; background-color:#fff; 
+                  position:fixed; top:0px; bottom:0px; right:-302px; z-index:666; }
+.attr-value-box .title { margin:20px 20px 0 20px; border-bottom:solid 1px #318ae4; padding-bottom:5px; }
+.attr-value-box .header-title {display:block; margin-bottom:10px;}
+.attr-value-box .add-value { position:relative; height:30px;  width:248px;margin-bottom:10px;}
+.attr-value-box .value-name { height:30px; line-height:30px; width:248px; }
+.attr-value-box .ico-input-add { position:absolute; right:-5px; top:-6px; font-size:30px; color:#ccc; cursor:pointer;}
+.attr-value-box .ico-input-add:hover { color:#318ae4; }
+
+.attr-value-box ul{ width:300px; margin-top:20px; padding-bottom:30px; }
+.attr-value-box ul li{ width:220px; height:30px; margin-left:39px;  border-radius:5px; line-height:30px; margin-top:10px; text-align:center; cursor:pointer;position:relative;}
+.attr-value-box ul li input{ height:28px; line-height:30px; width:200px; text-align:center; cursor:pointer; }
+.attr-value-box ul li span{ position:absolute; right:-5px; top:-9px; display:none; background-color:white; }
+.attr-value-box ul li:hover span{ display:inline-block; }
+
+/*分类*/
+.category-header { font-size:14px; line-height:25px; margin-top:20px; }
+.category-header a{ font-size:14px; line-height:25px; }
+.category-header a:hover{ text-decoration:underline; }
+.category-box { padding-bottom:20px; margin-left:10px; }
+.category-box .category-item { height:40px; }
+.category-box .category-item .category{ background:url('/modules/images/ico-category.png') no-repeat 0px 4px;  height:28px; line-height:26px; display:inline-block; 
+                                        padding-left:20px; margin:6px 0 0 5px; color:#666; font-size:14px; }
+.category-box .category-item .category.close{ background:url('/modules/images/ico-category-close.png') no-repeat 0px 4px; }
+
+.category-box .category-item a { display:inline-block;  font-size:14px; height:28px; line-height:26px; margin:6px 0 0 5px; }
+.category-box .category-item a:hover { text-decoration:underline; }
+
+.category-box .icoopen,.category-box  .icoclose { display:inline-block; width:20px; height:20px; margin-top:12px; cursor:pointer; margin-left:-28px;}
+.category-box .icoopen{ background:url('/modules/images/ico-tree-open.png') no-repeat;  }
+.category-box .icoclose{ background:url('/modules/images/ico-tree-pull.png') no-repeat;}
+.category-box .leftline{ background:url('/modules/images/ico-tree-full.png') no-repeat -5px;display:inline-block; width:35px; height:40px; }
+.category-box .lastline{ background:url('/modules/images/ico-tree-last.png') no-repeat -5px; display:inline-block; width:35px; height:40px;}
+.category-box .line{ background:url('/modules/images/ico-tree-line.png') no-repeat -5px;display:inline-block; width:35px; height:40px; }
+.category-box .null{ display:inline-block; width:40px; height:40px;}
+
+
+/*产品样式*/
+.product-add { overflow:auto; }
+.product-add li { height:auto; }
+.product-add .column-name{ width:85px; float:left; }
+/*.product-add input[type="checkbox"] { vertical-align:middle; margin:0 2px; }*/
+
+/*添加产品组合规格*/
+.child-product-table { min-width:700px;  width:80%; margin-left:85px;}
+.child-product-table img,.child-table-list img{ width: 80px; height: 80px; display: inline-block; vertical-align: middle; }
+
+.edui-container { min-width:700px; width:80%; float:left; }
+
+.product-img { position:absolute; top:100px; right:50px; width:150px; }
+.product-img img{ width:150px;}
+
+.salesattr .salesattr-values span{ min-width:80px;}
+
+
+/*添加子产品*/
+.product-details-add { width:500px; min-height:200px; }
+.product-imgS { position:absolute; top:60px; right:20px; max-width:150px; max-height:150px; }
+

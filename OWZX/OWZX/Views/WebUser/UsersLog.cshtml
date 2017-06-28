@@ -1,0 +1,31 @@
+﻿@{
+    ViewBag.Title = "登录记录"; 
+}
+@section css{   
+}
+@section scripts{ 
+    <script type="text/javascript">
+        seajs.use(["scripts/webuser/userlogs"], function (obj) {
+            obj.init('@ViewBag.Uid');
+        });
+    </script>
+}
+<div class="header-box">
+    <span class="header-title left">登录记录</span>  
+</div>
+<div class="search-header">  
+    <div class="left searth-module" data-text="关键字搜索..." data-width="160"> </div>
+</div>
+<div class="content-body">
+     <table class="table-list">
+         <tr class="tr-header">
+             <td class="tLeft">登陆账号</td>
+             <td class="tLeft">昵称</td>
+             <td class="tLeft">IP</td>
+            <td class="tLeft">IP地址</td>  
+             <td class="center">登录时间</td> 
+         </tr>
+    </table>
+    <div id="pager" class="mTop20"></div>
+</div> 
+

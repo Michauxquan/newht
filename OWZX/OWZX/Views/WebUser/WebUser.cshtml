@@ -1,0 +1,47 @@
+﻿    @{
+    ViewBag.Title = "用户管理";
+    var roelslist = (List<OWZXEntity.Manage.M_Role>)ViewBag.Roles;
+}
+
+
+@section scripts{
+    <script type="text/javascript">
+        seajs.use(["scripts/webuser/users"], function(obj) {
+            obj.init();
+        });
+    </script>
+}
+<div class="header-box">
+    <span class="header-title left">当前位置-用户管理</span>
+    <div class="btn-add right " id="createModel">新建用户</div>
+</div>
+<div class="search-header">  
+    <div class="left searth-module" data-text="关键字搜索..." data-width="160"> </div>
+</div>
+<div class="content-body">
+    <table class="table-list">
+        <tr class="tr-header">
+            <td class="tLeft">登陆账号</td>
+            <td class="tLeft">昵称</td>
+            <td class="tLeft">手机</td>
+            <td class="tLeft">余额</td>
+            <td class="tLeft">银行余额</td>
+            <td class="tLeft">类型</td>
+            <td class="width150">注册时间</td>
+            <td class="width150">访问时间</td>
+            <td class="tLeft">角色</td>
+            <td class="tLeft"> 便捷链接</td>
+            <td class="width80">操作</td>
+        </tr>
+    </table>
+    <div id="pager" class="mTop20"></div>
+</div>
+<ul class="dropdown-ul hide" style="width: 65px;">
+    <li class=" " id="updateObject">编辑</li>
+    <li class=" " id="deleteObject">删除</li>
+</ul> 
+
+    
+ 
+
+ 

@@ -1,0 +1,101 @@
+﻿{
+    "Error": "",
+    "Item": {	
+		"ProductCode": {
+            "title": "产品编号",
+            "hide": false,
+            "format": false,
+            "exporttype": -1,
+			"testexporttype": -1,
+			"datasource":"",
+			"importtype":-1,
+			"importcolumn":"",
+			"datatype":"string",
+			"defaulttext":"CESHI001"
+        },
+		"ProductName": {
+            "title": "产品名称",
+            "hide": false,
+            "format": false,
+            "exporttype": -1,
+			"testexporttype": -1,
+			"datasource":"",
+			"importtype":-1,
+			"importcolumn":"",
+			"datatype":"string",
+			"defaulttext":"CESHI001"
+        },	
+		"Remark": {
+            "title": "产品规格",
+            "hide": false,
+            "format": false,
+            "exporttype": -1,
+			"testexporttype": -1,
+			"datasource":"",
+			"importtype":-1,
+			"importcolumn":"CreateUserID",		
+			"datatype":"string",
+			"defaulttext":"1.0"
+        },
+		"UnitID": {
+            "title": "单位",
+            "hide": false,
+            "format": true,
+            "exporttype": 11,
+			"testexporttype": -1,
+			"datasource":"",
+			"importtype":-1,
+			"importcolumn":"",
+			"datatype":"string",
+			"defaulttext":"CESHI001"
+        },
+		"QCQuantity": {
+            "title": "期初库存",
+            "hide": false,
+            "format": false,
+            "exporttype": -1,
+			"testexporttype": -1,
+			"datasource":"",
+			"importtype":-1,
+			"importcolumn":"",		
+			"datatype":"string",
+			"defaulttext":120
+        },	
+		"InQuantity": {
+            "title": "入库数量",
+            "hide": false,
+            "format": false,
+            "exporttype": -1,
+			"testexporttype": -1,
+			"datasource":"",
+			"importtype":-1,
+			"importcolumn":"",		
+			"datatype":"string",
+			"defaulttext":120
+        },	
+		"OutQuantity": {
+            "title": "出库数量",
+            "hide": false,
+            "format": false,
+            "exporttype": -1,
+			"testexporttype": -1,
+			"datasource":"",
+			"importtype":-1,
+			"importcolumn":"",		
+			"datatype":"string",
+			"defaulttext":120
+        },	
+		"JYQuantity": {
+            "title": "结余库存",
+            "hide": false,
+            "format": false,
+            "exporttype": -1,
+			"testexporttype": -1,
+			"datasource":"",
+			"importtype":-1,
+			"importcolumn":"",		
+			"datatype":"string",
+			"defaulttext":120
+        },	
+    } 
+}

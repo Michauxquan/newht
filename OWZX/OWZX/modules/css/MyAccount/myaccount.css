@@ -1,0 +1,37 @@
+﻿
+body {  background-color:#fff; }
+
+.accountMenu { left: 0px; top:1px; bottom:0px; width: 100%;background-color:#fff; }
+  
+.content-body { background-color:#fff; padding-top:16px; }
+.accountUl { border-bottom:solid 1px #ccc; height:31px; }
+.accountUl li { line-height: 30px; width:120px; }
+.accountUl li a{ line-height: 30px;  width:120px; text-align:center; display:inline-block; color:#333; }
+.accountUl .active { background-color: #fff; }
+#movespan {position: absolute;top:40px; width:110px; border-bottom:solid 2px #4380BE;}
+.accountContent { margin: 0px 0px 0px 0px; float:left;width: 100%;  }
+div[name="accountInfo"] { margin-left:5px; }
+.account-box { padding:15px 20px 5px 20px; overflow:auto; background-color:#fff;  }
+.account-box a {margin-left:8px;}
+.accountHeader { line-height: 62px;padding-left:10px; border-bottom: solid 1px #ccc; font-size: 16px; color: #666; }
+.accountsearch-body { margin-top:15px;}
+
+
+/*个人中心*/
+.userinfo{ height: 100px;margin: 10px 20px 0 20px;}
+.imgradius{width: 80px; margin-top: 4px; border-radius: 80px; }
+
+/*新建样式*/
+.table-info {  padding-bottom:20px; overflow:auto; }
+.table-info li{ line-height:25px; margin-top:5px;  padding: 2px 0px;}
+.table-info li input[type="text"],.table-add li input[type="password"]{ height:20px; line-height:20px; padding:2px 5px; width:150px; }
+.table-info li textarea {resize:none; height:80px; line-height:20px; padding:1px 5px; border:solid 1px #ccc; width:350px; border-radius:2px;}
+.table-info span {  display:inline-block; vertical-align:top;}
+.table-info .column-title { color:#666; width:100px;}
+
+
+
+.error-body { display: none; }
+.error-lump { border-right:solid 7px #ED9E9E; border-top:solid 8px transparent ;border-bottom:solid 8px transparent; 
+                width:0; height:0; position:absolute; left:325px; top:12px;z-index:100; }
+.error-msg { padding: 8px; background-color: #ED9E9E; color: red; position: absolute; left: 332px; top: 5px; z-index: 100; width: 110px; }

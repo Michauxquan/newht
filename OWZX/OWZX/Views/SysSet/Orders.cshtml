@@ -1,0 +1,73 @@
+﻿@{ 
+    Layout = null;
+}
+<html>
+<head>
+    <link href="/modules/css/base.css" rel="stylesheet" />
+    <link href="/modules/css/layout.css" rel="stylesheet" />
+    <link href="/modules/css/iconfont/iconfont.css" rel="stylesheet" />
+    <link href="/modules/plug/daterangepicker/daterangepicker.css" rel="stylesheet" />
+    <script src="/Scripts/jquery-1.11.1.js"></script>
+    <script type="text/javascript" src="/Scripts/sea.js"></script>
+    <script type="text/javascript" src="/Scripts/sea-config.js"></script>
+    <script type="text/javascript">
+        seajs.use(["scripts/sysset/ordersaudit"], function (ObjectJS) {
+            ObjectJS.init();
+        });
+    </script>
+</head>
+<body>
+    <div class="main-body">
+        <div class="main-content">
+            <div class="header-box">
+                <span class="header-title left">订单审核</span>
+                 <div class="btn-add right" id="createModel">新建订单</div>
+            </div>
+            <div class="search-header">
+                <div class="left mRight5" id="orderType"></div>
+                <div class="left mRight5" id="orderStatus"></div>
+                <div class="left" title="创建时间">
+                    <input type="text" id="iptCreateTime" placeholder="创建时间" class="ipt-date" />
+                </div>
+                <div class="btn-filter right"></div>
+                <div class="right searth-module mRight20" data-text="关键字搜索..." data-width="160"></div>
+            </div>
+
+            <div class="content-body">
+                <table class="table-list">
+                    <tr class="tr-header">
+                        <td class=" tLeft width30"></td>
+                        <td class="tLeft width150">订单编号</td>
+                        <td class="tLeft minwidth70">支付信息</td>
+                        <td class="tLeft minwidth70">卡号</td>
+                        <td class="tLeft width80">总金额</td>
+                        <td class="width80">支付方式</td>
+                        <td class="width80">状态</td>
+                        <td class="width150">创建时间</td>
+                        <td class="width100">创建人</td>
+                        <td class="width60">操作</td>
+                    </tr>
+                </table>
+                <ul class="left batch-operate mTop20 hide">
+                    <li class="width100 mTop5">
+                        <span class="ico-check pLeft5 checkAll" >批量操作</span>
+                    </li>
+                    <li class="width60">
+                        <a href="javascript:void(0);" class="btn mulitUpdate" data-type="1">审核</a>
+                    </li>
+                    <li class="width60">
+                        <a href="javascript:void(0);" class="btn mulitUpdate" data-type="9">作废</a>
+                    </li>
+                </ul>
+                <div id="pager" class="mTop20"></div>
+                <div class="clear"></div>
+            </div>
+            <ul class="dropdown-ul hide" style="width: 65px;">
+                <li class=" " id="updateObject">审核</li>
+                <li class=" " id="deleteObject">作废</li>
+            </ul>
+
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,126 @@
+﻿{
+    "Error": "",
+    "Item": {	 
+		"ProductCode": {
+            "title": "产品编码",
+            "hide": false,
+            "format": false,
+            "exporttype": -1,
+			"testexporttype": -1,
+			"datasource":"",
+			"importtype":-1,
+			"importcolumn":"",
+			"datatype":"string",
+			"defaulttext":"CESHI001"
+        },	
+        "ProductName": {
+            "title": "产品名称",
+            "hide": false,
+            "format": false,
+            "exporttype": -1,
+			"testexporttype": -1,
+			"datasource":"",
+			"importtype":-1,
+			"importcolumn":"",
+			"datatype":"string",
+			"defaulttext":"二当家--上海云销科技有限公司"
+        },  
+		"DetailsCode": {
+            "title": "规格编码",
+            "hide": true,
+            "format": false,
+            "exporttype": -1,
+			"testexporttype": -1,
+			"datasource":"",
+			"importtype":-1,
+			"importcolumn":"",
+			"datatype":"string",
+			"defaulttext":"可为空"
+        },
+		"Remark": {
+            "title": "规格名称",
+            "hide": false,
+            "format": false,
+            "exporttype": -1,
+			"testexporttype": -1,
+			"datasource":"",
+			"importtype":-1,
+			"importcolumn":"",
+			"datatype":"string",
+			"defaulttext":"黑色 S"
+        },
+		 
+        "WareName": {
+            "title": "仓库",
+            "hide": false,
+            "format": false,
+            "exporttype": -1,
+			"testexporttype": -1,
+			"datasource":"",
+			"importtype":-1,
+			"importcolumn":"",		
+			"datatype":"int",
+			"defaulttext":120
+        },	
+		"DepotCode": {
+            "title": "货位",
+            "hide": false,
+            "format": false,
+            "exporttype": -1,
+			"testexporttype":-1,
+			"datasource":"DropSourceList|5",
+			"importtype":-1,
+			"importcolumn":"",			
+			"datatype":"string",
+			"defaulttext":"个"
+        },
+		"BatchCode": {
+            "title": "批次",
+            "hide": false,
+            "format": false,
+            "exporttype": -1,
+			"testexporttype": -1,
+			"datasource":"",
+			"importtype":-1,
+			"importcolumn":"",
+			"datatype":"string",
+			"defaulttext":"100"
+        },
+		"StockIn": {
+            "title": "入库数量",
+            "hide": false,
+            "format": false,
+            "exporttype": -1,
+			"testexporttype": -1,
+			"datasource":"",
+			"importtype":-1,
+			"importcolumn":"",
+			"datatype":"int",
+			"defaulttext":"100"
+        }, 
+		"StockOut": {
+            "title": "出库数量",
+            "hide": false,
+            "format": false,
+            "exporttype": -1,
+			"testexporttype": -1,
+			"datasource":"",
+			"importtype":-1,
+			"importcolumn":"",		
+			"datatype":"int",
+			"defaulttext":"120.00"
+        },
+        "StockLast": {
+            "title": "结余库存",
+            "hide": false,
+            "format": false,
+            "exporttype": -1,
+			"testexporttype": -1,
+			"datasource":"",
+			"importtype":-1,
+			"importcolumn":"",		
+			"datatype":"int",
+			"defaulttext":"0"
+        } 
+    } 
+}

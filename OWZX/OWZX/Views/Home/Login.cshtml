@@ -1,0 +1,60 @@
+﻿@{
+    Layout = null;
+}
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta charset="UTF-8" />
+    <meta content="白水非凡工作室，专业的网站定制APP开发，已诚信做人,踏实做事为核心价值观,实现互赢互利,共创美好未来." name="keywords" />
+    <meta content="竞猜市场上面的龙头工作室。支持第三方应用对接，可针对企业/个体特殊业务流程订制模式。" name="description" />
+    <meta content="width=device-width,initial-scale=1,maximum-scale=1" name="viewport"/>
+    <meta content="telephone=no" name="format-detection" />
+    <title>白水非凡工作室</title>
+    <link href="/modules/css/base.css" rel="stylesheet" />
+    <link href="/modules/css/home/login.css" rel="stylesheet" />
+    <link rel="shortcut icon" href="/modules/images/logo_login.png" />
+    <script type="text/javascript" src="/Scripts/sea.js"></script>
+    <script type="text/javascript" src="/Scripts/sea-config.js?v=@(ExpandClass.Version)"></script>
+    <script type="text/javascript">
+        seajs.use(["scripts/home/login"], function (home) {
+            home.init('@(ViewBag.Status)','@(ViewBag.BindAccountType)', '@(ViewBag.ReturnUrl)');
+        });
+    </script>
+</head>
+<body>
+    <div class="login-body">
+        <div class="login-header">
+            <div class="left header-logo" onclick="location.href='http://localhost:8888/'">
+                <div class="left"><img src="/modules/images/logo_login.png"  style="width:26px;"/></div>
+                <div class="left headerTitle">白水非凡</div>
+                <div class="clear"></div>
+            </div>
+            <a class="btnRegister right" href="/Home/Register?ReturnUrl=@(ViewBag.ReturnUrl)">注册</a>
+       </div>
+        <div class="main">
+            <div class="loginTitle">登录</div>
+            <div class="login">
+                <div class="registerErr hide"></div>
+                <div class="loginbar">
+                    <input type="text" class="input icoUserName" id="iptUserName" placeholder="请输入账号" value="@ViewBag.UserName" maxlength="25"/>
+                </div>
+                <div class="loginbar" style="position:relative;">
+                    <input type="password" class="input icoUserPwd" id="iptPwd"/>
+                    <div class="txtBoxPassword">请输入密码</div>
+                </div>
+                <div class="btnLogin mTop20" id="btnLogin">@((ViewBag.BindAccountType != 4 && ViewBag.BindAccountType != 5)?"登录":"绑定")</div>
+                <div class="remember-box ">
+                    <div class="cb-remember-password ico-check ">
+                        一周内保持登录
+                    </div>
+                    <div class="right pRight5"><a href="/Home/FindPassword" class="linkRegister">忘记密码?</a></div>
+                    <div class="clear"></div>
+                </div> 
+            </div>
+        </div>
+        <div class="copyright">
+            Copyright©2015-2016 <a href="http://localhost:8888/">白水非凡工作室</a> 沪ICP备15042543号-2
+        </div>
+    </div>
+</body>
+</html>

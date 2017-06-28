@@ -1,0 +1,77 @@
+﻿{
+    "Error": "",
+    "Item": {	
+		"ProductCode": {
+            "title": "产品编号",
+            "hide": false,
+            "format": false,
+            "exporttype": -1,
+			"testexporttype": -1,
+			"datasource":"",
+			"importtype":-1,
+			"importcolumn":"",
+			"datatype":"string",
+			"defaulttext":"CESHI001"
+        },
+		"ProductName": {
+            "title": "产品名称",
+            "hide": false,
+            "format": false,
+            "exporttype": -1,
+			"testexporttype": -1,
+			"datasource":"",
+			"importtype":-1,
+			"importcolumn":"",
+			"datatype":"string",
+			"defaulttext":"CESHI001"
+        },	
+		"Remark": {
+            "title": "产品规格",
+            "hide": false,
+            "format": false,
+            "exporttype": -1,
+			"testexporttype": -1,
+			"datasource":"",
+			"importtype":-1,
+			"importcolumn":"CreateUserID",		
+			"datatype":"string",
+			"defaulttext":"1.0"
+        },
+		"UnitName": {
+            "title": "单位",
+            "hide": false,
+            "format": false,
+            "exporttype": -1,
+			"testexporttype": -1,
+			"datasource":"",
+			"importtype":-1,
+			"importcolumn":"",
+			"datatype":"string",
+			"defaulttext":"CESHI001"
+        },
+		"Quantity": {
+            "title": "销售数量",
+            "hide": false,
+            "format": false,
+            "exporttype": -1,
+			"testexporttype": -1,
+			"datasource":"",
+			"importtype":-1,
+			"importcolumn":"",		
+			"datatype":"string",
+			"defaulttext":120
+        },	
+		"TotalMoney":{  
+			"title": "销售金额",
+            "hide": false,
+            "format": false,
+            "exporttype": -1,
+			"testexporttype": -1,
+			"datasource":"",
+			"importtype":-1,
+			"importcolumn":"status",		
+			"datatype":"int",
+			"defaulttext":"是"
+		} 
+    } 
+}

@@ -1,0 +1,12 @@
+﻿{%
+	for(var i=0, j=$data.length; i < j; i++){
+	var item = $data[i];
+%}
+<tr class="list-item">
+    <td class="name">{%=item.Email%}</td>
+    <td class="name">{%=item.NickName%}</td>
+    <td class="name">{%=(item.IP=='::1'?'127.0.0.1':item.IP)%}</td>
+    <td class="name">{%=item.IPName%}</td>  
+    <td class='center'>{%=item.CreateTime.toDate("yyyy-MM-dd hh:mm:ss")%}</td> 
+</tr>
+{% } %}

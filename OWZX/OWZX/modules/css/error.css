@@ -1,0 +1,75 @@
+﻿body {
+background-color:#fff;
+}
+
+.error-header {
+margin:15px 20px;
+background:url(/modules/images/logo_login.png) no-repeat 0px 0px ;
+background-size:26px 26px;
+line-height:26px;
+padding-left:35px;
+font-size:16px;
+color:#4a98e7;
+cursor:pointer;
+}
+
+.error-box {
+margin:100px auto;
+width:980px;
+}
+
+.error-content {
+    
+}
+
+.error-content .title{
+font-size:16px;
+color:#777;
+margin-bottom:10px;
+}
+
+.error-content ul {
+list-style:none;
+padding:0;
+
+}
+
+.error-content ul li {
+line-height:40px;
+color:#333;
+font-size:14px;
+}
+
+    .error-content li a {
+    font-size:14px;
+    }
+
+     .error-content li .iconfont {
+    font-size:16px;
+    color:#333;
+    margin-right:5px;
+    }
+
+.btn-home {
+width:150px;
+line-height:50px;
+text-align:center;
+border-radius:5px;
+background-color:#eee;
+color:#666;
+font-size:16px;
+cursor:pointer;
+border:1px solid #ccc;
+}
+
+.btn-prev {
+width:150px;
+line-height:50px;
+text-align:center;
+border-radius:5px;
+background-color:#4a98e7;
+color:#fff;
+font-size:16px;
+cursor:pointer;
+border:1px solid #4a97e4;
+}

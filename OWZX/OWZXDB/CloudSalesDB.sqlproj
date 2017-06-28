@@ -1,0 +1,221 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <Name>CloudSalesDB</Name>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>4.1</ProjectVersion>
+    <ProjectGuid>{86994cb6-735c-43cc-99f9-0e461efb21a1}</ProjectGuid>
+    <DSP>Microsoft.Data.Tools.Schema.Sql.Sql100DatabaseSchemaProvider</DSP>
+    <OutputType>Database</OutputType>
+    <RootPath>
+    </RootPath>
+    <RootNamespace>CloudSalesDB</RootNamespace>
+    <AssemblyName>CloudSalesDB</AssemblyName>
+    <ModelCollation>1033, CI</ModelCollation>
+    <DefaultFileStructure>BySchemaAndSchemaType</DefaultFileStructure>
+    <DeployToDatabase>True</DeployToDatabase>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetLanguage>CS</TargetLanguage>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <SqlServerVerification>False</SqlServerVerification>
+    <IncludeCompositeObjects>True</IncludeCompositeObjects>
+    <TargetDatabaseSet>True</TargetDatabaseSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
+    <!-- Default to the v11.0 targets path if the targets file for the current VS version is not found -->
+    <SSDTExists Condition="Exists('$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets')">True</SSDTExists>
+    <VisualStudioVersion Condition="'$(SSDTExists)' == ''">11.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Condition="'$(SQLDBExtensionsRefPath)' != ''" Project="$(SQLDBExtensionsRefPath)\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <Import Condition="'$(SQLDBExtensionsRefPath)' == ''" Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <ItemGroup>
+    <Folder Include="Properties" />
+    <Folder Include="Procedures" />
+    <Folder Include="Procedures\Agents" />
+    <Folder Include="Procedures\Custom" />
+    <Folder Include="Procedures\Finance" />
+    <Folder Include="Procedures\Manage" />
+    <Folder Include="Procedures\Planwork" />
+    <Folder Include="Procedures\Products" />
+    <Folder Include="Procedures\Report" />
+    <Folder Include="Procedures\RepotLog" />
+    <Folder Include="Procedures\Sales" />
+    <Folder Include="Procedures\ShoppingCart" />
+    <Folder Include="Procedures\Stock" />
+    <Folder Include="Procedures\System" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Procedures\Agents\P_GetAgentOrderByID.sql" />
+    <None Include="Procedures\Agents\P_GetAgentOrders.sql" />
+    <None Include="Procedures\Custom\P_CreateContact.sql" />
+    <None Include="Procedures\Custom\P_CreateCustomer.sql" />
+    <None Include="Procedures\Custom\P_CreateCustomerReply.sql" />
+    <None Include="Procedures\Custom\P_GetActivitys.sql" />
+    <None Include="Procedures\Custom\P_GetCustomerByID.sql" />
+    <None Include="Procedures\Custom\P_GetCustomers.sql" />
+    <None Include="Procedures\Custom\P_GetCustomersByKeywords.sql" />
+    <None Include="Procedures\Custom\P_UpdateContact.sql" />
+    <None Include="Procedures\Custom\P_UpdateCustomer.sql" />
+    <None Include="Procedures\Custom\P_UpdateCustomerAgent.sql" />
+    <None Include="Procedures\Custom\P_UpdateCustomerOwner.sql" />
+    <None Include="Procedures\Custom\P_UpdateCustomerStage.sql" />
+    <None Include="Procedures\Finance\P_AuditBillingInvoice.sql" />
+    <None Include="Procedures\Finance\P_CreateBillingInvoice.sql" />
+    <None Include="Procedures\Finance\P_CreateBillingPay.sql" />
+    <None Include="Procedures\Finance\P_CreateStorageBillingInvoice.sql" />
+    <None Include="Procedures\Finance\P_CreateStorageBillingPay.sql" />
+    <None Include="Procedures\Finance\P_DeleteBillingInvoice.sql" />
+    <None Include="Procedures\Finance\P_DeleteStorageBillingInvoice.sql" />
+    <None Include="Procedures\Finance\P_GetClientAccountBills.sql" />
+    <None Include="Procedures\Finance\P_GetOrderBillByID.sql" />
+    <None Include="Procedures\Finance\P_GetOrderBills.sql" />
+    <None Include="Procedures\Finance\P_GetPayableBillByID.sql" />
+    <None Include="Procedures\Finance\P_GetPayableBills.sql" />
+    <None Include="Procedures\Manage\M_AddClientOrder.sql" />
+    <None Include="Procedures\Manage\M_AddClientOrderDetail.sql" />
+    <None Include="Procedures\Manage\M_Get_Report_AgentAction_Day.sql" />
+    <None Include="Procedures\Manage\M_GetClientOrders.sql" />
+    <None Include="Procedures\Manage\M_InsertClient.sql" />
+    <None Include="Procedures\Manage\M_PayOrderAndAuthorizeClient.sql" />
+    <None Include="Procedures\Manage\M_UpdateClient.sql" />
+    <None Include="Procedures\Planwork\Report_AgentAction_Day.sql" />
+    <None Include="Procedures\Products\P_AddCategoryAttr.sql" />
+    <None Include="Procedures\Products\P_DeleteCategory.sql" />
+    <None Include="Procedures\Products\P_GetAttrsByCategoryID.sql" />
+    <None Include="Procedures\Products\P_GetAttrsByClientID.sql" />
+    <None Include="Procedures\Products\P_GetBrandList.sql" />
+    <None Include="Procedures\Products\P_GetCategoryDetailByID.sql" />
+    <None Include="Procedures\Products\P_GetFilterProducts.sql" />
+    <None Include="Procedures\Products\P_GetProductAttrByID.sql" />
+    <None Include="Procedures\Products\P_GetProductAttrList.sql" />
+    <None Include="Procedures\Products\P_GetProductByID.sql" />
+    <None Include="Procedures\Products\P_GetProductDetails.sql" />
+    <None Include="Procedures\Products\P_GetProductList.sql" />
+    <None Include="Procedures\Products\P_InsertAttr.sql" />
+    <None Include="Procedures\Products\P_InsertCategory.sql" />
+    <None Include="Procedures\Products\P_InsertProduct.sql" />
+    <None Include="Procedures\Products\P_InsertProductDetail.sql" />
+    <None Include="Procedures\Products\P_UpdateCategory.sql" />
+    <None Include="Procedures\Products\P_UpdateProduct.sql" />
+    <None Include="Procedures\Products\P_UpdateProductDetail.sql" />
+    <None Include="Procedures\Report\R_GetCustomerReport.sql" />
+    <None Include="Procedures\Report\R_GetCustomerSourceDate.sql" />
+    <None Include="Procedures\Report\R_GetCustomerSourceScale.sql" />
+    <None Include="Procedures\Report\R_GetCustomerStageRate.sql" />
+    <None Include="Procedures\Report\R_GetOpportunityStageRate.sql" />
+    <None Include="Procedures\Report\R_GetOrderMapReport.sql" />
+    <None Include="Procedures\Report\R_GetUserCustomers.sql" />
+    <None Include="Procedures\Report\R_GetUserOpportunitys.sql" />
+    <None Include="Procedures\Report\R_GetUserOrders.sql" />
+    <None Include="Procedures\RepotLog\R_GetAgentActions_Log.sql" />
+    <None Include="Procedures\RepotLog\R_GetClientUpcomings.sql" />
+    <None Include="Procedures\Sales\P_ApplyReturnOrder.sql" />
+    <None Include="Procedures\Sales\P_ApplyReturnProduct.sql" />
+    <None Include="Procedures\Sales\P_CreateOrder.sql" />
+    <None Include="Procedures\Sales\P_CreateOrderReply.sql" />
+    <None Include="Procedures\Sales\P_DeleteOrder.sql" />
+    <None Include="Procedures\Sales\P_EditOrder.sql" />
+    <None Include="Procedures\Sales\P_EffectiveOrder.sql" />
+    <None Include="Procedures\Sales\P_GetOpportunitys.sql" />
+    <None Include="Procedures\Sales\P_GetOrderByID.sql" />
+    <None Include="Procedures\Sales\P_GetOrders.sql" />
+    <None Include="Procedures\Sales\P_SubmitOrder.sql" />
+    <None Include="Procedures\Sales\P_UpdateOpportunityStage.sql" />
+    <None Include="Procedures\Sales\P_UpdateOrderOwner.sql" />
+    <None Include="Procedures\Sales\P_UpdateOrderPrice.sql" />
+    <None Include="Procedures\Sales\P_UpdateReturnQuantity.sql" />
+    <None Include="Procedures\ShoppingCart\P_AddShoppingCart.sql" />
+    <None Include="Procedures\ShoppingCart\P_AddShoppingCartBatchIn.sql" />
+    <None Include="Procedures\ShoppingCart\P_AddShoppingCartBatchOut.sql" />
+    <None Include="Procedures\ShoppingCart\P_DeleteCart.sql" />
+    <None Include="Procedures\ShoppingCart\P_GetProductByIDForDetails.sql" />
+    <None Include="Procedures\ShoppingCart\P_GetShoppingCart.sql" />
+    <None Include="Procedures\ShoppingCart\P_UpdateCartPrice.sql" />
+    <None Include="Procedures\ShoppingCart\P_UpdateCartQuantity.sql" />
+    <None Include="Procedures\Stock\P_AddStorageDoc.sql" />
+    <None Include="Procedures\Stock\P_AuditApplyReturn.sql" />
+    <None Include="Procedures\Stock\P_AuditApplyReturnProduct.sql" />
+    <None Include="Procedures\Stock\P_AuditDamagedDoc.sql" />
+    <None Include="Procedures\Stock\P_AuditOverflowDoc.sql" />
+    <None Include="Procedures\Stock\P_AuditReturnIn.sql" />
+    <None Include="Procedures\Stock\P_AuditStorageIn.sql" />
+    <None Include="Procedures\Stock\P_ConfirmAgentOrderOut.sql" />
+    <None Include="Procedures\Stock\P_ConfirmAgentOrderSend.sql" />
+    <None Include="Procedures\Stock\P_GetDepotSeats.sql" />
+    <None Include="Procedures\Stock\P_GetDetailStocks.sql" />
+    <None Include="Procedures\Stock\P_GetProductsByKeywords_Stock.sql" />
+    <None Include="Procedures\Stock\P_GetProductStocks.sql" />
+    <None Include="Procedures\Stock\P_GetStorageDetail.sql" />
+    <None Include="Procedures\Stock\P_GetStorageDocList.sql" />
+    <None Include="Procedures\Stock\P_GetWareHouses.sql" />
+    <None Include="Procedures\Stock\P_InvalidApplyReturn.sql" />
+    <None Include="Procedures\Stock\P_InvalidApplyReturnProduct.sql" />
+    <None Include="Procedures\Stock\P_SubmitDamagedDoc.sql" />
+    <None Include="Procedures\Stock\P_SubmitOverflowDoc.sql" />
+    <None Include="Procedures\Stock\P_UpdateStorageStatus.sql" />
+    <None Include="Procedures\System\P_ChangeUsersParentID.sql" />
+    <None Include="Procedures\System\P_CreateWareHouse.sql" />
+    <None Include="Procedures\System\P_DeleteOpportunityStage.sql" />
+    <None Include="Procedures\System\P_DeleteRole.sql" />
+    <None Include="Procedures\System\P_DeletetCustomStage.sql" />
+    <None Include="Procedures\System\P_DeleteTeam.sql" />
+    <None Include="Procedures\System\P_DeleteUserByID.sql" />
+    <None Include="Procedures\System\P_GetUserByMDUserID.sql" />
+    <None Include="Procedures\System\P_GetUserToLogin.sql" />
+    <None Include="Procedures\System\P_InsertCustomSource.sql" />
+    <None Include="Procedures\System\P_InsertCustomStage.sql" />
+    <None Include="Procedures\System\P_InsterUser.sql" />
+    <None Include="Procedures\System\P_UpdateRolePermission.sql" />
+    <None Include="Procedures\System\P_UpdateUserParentID.sql" />
+    <None Include="Procedures\System\P_UpdateUserRole.sql" />
+    <None Include="Procedures\System\P_UpdateUserTeamID.sql" />
+    <None Include="Procedures\AlterSql.sql" />
+    <None Include="Procedures\InitDatabase.sql" />
+    <None Include="Procedures\P_GetPagerData.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Procedures\Sales\P_CreateOpportunity.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Procedures\Sales\P_GetOpportunityByID.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Procedures\Sales\P_CreateOpportunityReply.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Procedures\Sales\P_UpdateOpportunity.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Procedures\Sales\P_UpdateOpportunityOwner.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Procedures\Sales\P_CloseOpportunity.sql" />
+  </ItemGroup>
+</Project>

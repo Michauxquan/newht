@@ -1,0 +1,39 @@
+﻿@{
+    ViewBag.Title = "工厂增长统计";
+}
+
+
+<style type="text/css">
+    .source-box { height:400px; }
+</style>
+@section css{
+    <link href="/modules/plug/daterangepicker/daterangepicker.css" rel="stylesheet" />
+    }
+@section scripts{ 
+    <script type="text/javascript"> 
+        seajs.use(["scripts/report/clientsgrowreport"], function (obj) {
+            obj.init();
+        });
+    </script>
+}
+<div class="header-box">
+    <span class="header-title left">客户增量统计</span>
+</div>
+<div class="search-box">
+    <div class="search-header">
+        <ul class="search-tab search-type">
+            <li data-id="clientsGrowRPT" data-type="1" class="hover">按日统计</li>            
+            <li data-id="clientsGrowRPT" data-type="2">按周统计</li>
+            <li data-id="clientsGrowRPT" data-type="3" >按月统计</li>
+        </ul>
+    </div>
+</div>
+<div class="content-body">
+    <div class="left mBottom10">
+         <input type="text" id="rptBeginTime" placeholder="请选择时间段"  class="ipt-date" />
+    </div>
+
+    <div id="clientsGrowRPT" class="source-box">
+
+    </div>
+</div>

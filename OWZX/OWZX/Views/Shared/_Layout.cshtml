@@ -1,0 +1,29 @@
+﻿@{
+
+}
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>@ViewBag.Title</title>
+    <meta name="robots" content="noindex,nofollow">
+    <link href="/modules/css/base.css" rel="stylesheet" />
+    <link href="/modules/css/iconfont/iconfont.css" rel="stylesheet" />
+
+    @RenderSection("css", false)
+</head>
+<body>
+
+    @RenderBody()
+    <script src="/Scripts/jquery-1.11.1.js"></script>
+    <script type="text/javascript" src="/Scripts/sea.js"></script>
+    <script type="text/javascript" src="/Scripts/sea-config.js?v=@(ExpandClass.Version)"></script>
+    <script type="text/javascript">
+        seajs.use(["scripts/layout"], function (layout) {
+            layout.init();
+        });
+    </script>
+    @RenderSection("scripts", false)
+</body>
+    
+</html>

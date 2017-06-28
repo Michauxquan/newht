@@ -1,0 +1,178 @@
+﻿
+
+/*订单详情-订单状态记录padding: 0 10px 0 20px;*/
+.main-content { 
+}
+.content-title {height: 40px;line-height: 38px;border-bottom: solid 1px #eee;background-color: #fff;margin: 0px;}
+.content-title .titlename {font-size: 14px;color: #666;}
+.status-items {  }
+.status-items li{ float:left;  position:relative; height:40px; margin-left:-24px; }
+.status-items span { line-height:16px; display:block; color:#999; text-align:center; }
+.status-items .status-bg { width:12px; height:12px; border-radius:6px; background-color:#ccc; margin-left:24px; }
+.status-items .status-line { width:110px;height:2px; background-color:#eee; margin-top:5px;  }
+.status-items .status-time-text { width:100px; font-size:11px; position:absolute; top:-12px; }
+
+/*title*/
+.content-title ul li { float:left; height:40px; border-left:solid 1px #eee; font-size:14px; color:#666; padding:0 20px; }
+.content-title ul li span{ font-size:14px; color:#666; }
+.content-title ul .iconfont { font-size:20px; }
+
+/*样图信息*/
+.order-imgs-div { width:350px; }
+.order-imgs-div .order-imgs{ height:350px; width:350px; position:relative; overflow:hidden; background:url('/modules/images/none-img.png') no-repeat center; background-color:#f0f0f0; }
+.order-imgs-div .order-imgs img{ min-height:350px; min-width:350px; }
+.order-imgs-div .order-imgs img:hover{ cursor:pointer;}
+.order-imgs-list { height:48px; margin-top:5px; }
+.order-imgs-list li{ width:48px; height:48px; float:left; border:solid 1px #eee; margin-right:6px; margin-bottom:5px; cursor:pointer; position:relative;}
+.order-imgs-list li.hover{ border-color:#F0D2BA;}
+.order-imgs-list img{ width:48px; height:48px;}
+.order-imgs-list .edit-orderimages,#addOrderImages { font-size:40px; width:48px; height:48px;  color:#999; line-height:40px; text-align:center; }
+#addOrderImages{ width:48px; height:48px;border:solid 2px #eee; margin-right:6px; margin-bottom:5px; cursor:pointer; position:relative;display:inline-block;}
+.order-imgs-list #addOrderImages .edit-orderimages { line-height:0;padding-bottom:8px;border:none;background:transparent;}
+.order-imgs-list .ico-delete { position:absolute; top:-8px; right:-8px; background-color:#fff; border-radius:10px; }
+
+
+/*阿里标记*/ 
+.child-product-table { width:100%; border-spacing:0px;} 
+.child-product-table .tr-header{ height:35px; text-align:center;}
+.child-product-table .tr-header td{
+                           height: 27px;
+                           border-bottom:solid 2px #ddd;
+                           font-size:13px;
+                           color:#696969;
+                           padding:0 5px;
+                           white-space:nowrap;
+                           /*overflow: hidden;*/
+                           text-overflow:ellipsis;
+                           }
+
+.child-product-table tr:not(:first-child){ height:25px; }
+.child-product-table tr:not(:first-child):hover { background-color: #f6f6f6; }
+.child-product-table tr:not(:first-child) td{
+                                     padding:5px;
+                                     line-height: 27px;
+                                     border-bottom:solid 1px #ddd;
+                                     max-width:500px;
+                                     color:#333;
+                                     white-space:nowrap;
+                                     /*overflow: hidden;*/
+                                     text-overflow:ellipsis;
+                                     vertical-align:middle;
+                                     } 
+
+.bottombtn {float: right; padding: 5px 15px; background-color: #F39B4D; color: #fff;font-size: 14px; border: none; cursor: pointer; display: inline-block; border-radius: 2px; line-height: 24px; 
+       -moz-transition: all 0.3s; -webkit-transition: all 0.3s; -o-transition: all 0.3s; }
+.bottombtn:hover { background-color:#ff500b; }
+
+/*切换图片*/
+.enlarge-image-bgbox { width:100%;height:100%; position:fixed; top:0; left:0; background-color:#666; z-index:9999; opacity:0.9; }
+.enlarge-image-bgbox .iconfont{ float:right; color:#fff; font-size:20px; margin:10px 10px 0 0; cursor:pointer; }
+.enlarge-image-bgbox .iconfont:hover{ color:#4a98e7;  }
+
+.enlarge-image-box{ position:fixed;  top:40px; bottom:40px; left:100px; right:100px; z-index:19999; }
+
+.left-enlarge-image,.right-enlarge-image {position:fixed;  width:40px; height:100px;  cursor:pointer;cursor:pointer; }
+.left-enlarge-image { left:100px;  background:url('/modules/images/ico-prev-image.png') no-repeat;background-size:cover;}
+.left-enlarge-image:hover {  background:url('/modules/images/ico-prev-image-hover.png') no-repeat;background-size:cover;}
+.right-enlarge-image { right:100px; background:url('/modules/images/ico-next-image.png') no-repeat;background-size:cover; }
+.right-enlarge-image:hover {  background:url('/modules/images/ico-next-image-hover.png') no-repeat;background-size:cover; }
+
+.enlarge-image-item{ position:fixed;  top:40px; bottom:40px; left:200px; right:200px;  }
+.order-info .divright{   width:740px;  margin-left: 30px; } 
+.order-info .product-details li { height:25px; line-height:25px; float:left; padding:0 10px !important; margin:5px 10px 0 0 ; border:solid 2px #ccc ; cursor:pointer; display:inline-block; }
+.order-info .product-details li:hover { border:solid 2px #E79E5C;background-color: #FAEEE4;color:#E79E5C; } 
+.order-info .product-details li.hover { border:solid 2px #E79E5C; background-color: #FAEEE4;color:#E79E5C; }
+.order-info .product-details li.hasquantity{border:solid 2px #F0D2BA;}
+/*订单信息*/
+.order-info .moneyinfo { width: 810px; }
+.order-info .moneyinfo li{ line-height:25px; padding:3px; overflow:auto; }
+.order-info .moneyinfo li .column-title{ width:80px; float:left; color:#999; }
+
+.order-info .cutomerinfo {  border-left:solid 1px #f6f6f6; margin-top:20px; padding:0 50px 20px 50px; max-width:400px; }
+.order-info .cutomerinfo li{ line-height:25px; clear:both; padding:5px;  }
+.order-info .cutomerinfo li .column-title{ width:80px; float:left; color:#999; }
+
+.order-info .linetopbottom {border-bottom: 1px solid #f0f0f0;border-top: 1px solid #f0f0f0;}
+.order-info table{    display: table;border-collapse: collapse;border-spacing: 0;}
+.order-info .sizediv{position: relative;padding: 0px 10px 10px 16px;}
+.sizediv table tbody {display: table-row-group;vertical-align: middle;border-color: inherit;}
+.sizediv table tr{    display: table-row;vertical-align: inherit;border-color: inherit;}
+.sizediv table tr td{height: 44px;border-bottom: 1px dotted #e5e5e5;}
+.sizediv table .last-row td {border-bottom: 0 none;}
+.sizediv table tr .name {width: 160px;padding-right: 10px;font-weight: 700;word-wrap: break-word;word-break: break-all;white-space: normal;}
+.sizediv table tr .price {width: 120px;padding-right: 10px;} 
+
+
+.order-info .cartdiv{box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;margin-left: 10px;width: 760px;position:relative;}
+.order-info .cartdiv .cartlist{ width: 100%;z-index: 666;position: absolute;background-color: #fff;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box; }
+.cartlist tr {width: 100%;height: 100%;}
+.cartlist tr td{ line-height:50px;height: 50px;border: 1px solid #E5E5E5;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;}
+
+.carttable{width: 690px; height: 100%;margin-left: 70px; height: 50px;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box; }
+.carttable .tdcart{ font-size: 14px;text-align: center;border-left: 1px solid #E5E5E5;cursor: pointer;}
+.carttable .tdcart span {font-size: 14px;text-align: center;cursor: pointer;}
+.carttable .tdcart:hover { color: #f50;} 
+.carttable .tdcart:hover span{ color: #f50;}
+.carttable .tdcart:hover .dropdown-top {border-top:6px solid #f50;}
+.carttable .tdcart:hover .dropdown-bottom{ border-bottom:6px solid  #f50;}
+
+.carttable .tdcart.hover{ background-color: #fff;border-right: 1px solid #E5E5E5;}
+.order-info .pricetable .firsttr { height: 60px;}
+.pricetable .firsttr td span {color: #EC8C3F;float: left;}
+.pricetable .firsttr td .priceimg{ margin-top: 12px;}
+.pricetable .firsttr td .price{ font-size: 24px;font-weight: bolder;}
+
+
+ .order-info .quantity-add {height: 24px !important; line-height: 24px;font-size: 17.5px;font-weight: bolder; border: 1px solid #ccc;vertical-align: middle;cursor: pointer;} 
+ .order-info .quantity-add:hover{ border: 1px solid #4a98e7;}
+
+ .order-info input:hover{border: 1px solid #4a98e7;}
+ .order-info input.hover{border: 1px solid #4a98e7;}
+
+ .order-info .quantity-jian{height: 24px !important; line-height: 24px;font-size: 17.5px;font-weight: bolder; border: 1px solid #ccc;vertical-align: middle;cursor: pointer;} 
+ .order-info .quantity-jian:hover{ border: 1px solid #4a98e7;}
+
+
+.order-remark { margin-top:20px; padding:10px; border:solid 1px #eee; line-height:25px;word-break:break-all; }
+.order-remark .title{ color:#999; }
+
+/*订单品类*/
+.category-header { font-size:14px; border-bottom:solid 1px #eee; }
+.category-items { width:600px; overflow:auto; margin-bottom:10px; }
+.category-items li{ height:30px; float:left; line-height:30px; margin:5px 10px 0 0; cursor:pointer; }
+ 
+
+/*背景色*/
+.list-item.hover { background-color:#fafafa; }
+.total-item.hover { background-color:#fafafa; }
+
+.sample-report { cursor:pointer;}
+ 
+/*价格区间设置*/
+.price-range-box { 
+    background-color:#fff;
+    width:450px;
+    border:1px solid #eee;
+    border-radius:5px;
+    position:absolute;
+    left:60px;
+    top:0px;
+    padding:5px;
+    box-shadow:4px 4px 5px #ddd;
+    -webkit-box-shadow:4px 4px 5px #ddd;
+    -moz-box-shadow:4px 4px 5px #ddd;
+}
+.center-range li {margin-top:2px;padding:10px 0px 10px 0px;}
+.center-range li input { width:50px;margin:0 5px;}
+.center-range li div:last-child span{ color:#777;cursor:pointer;}
+.center-range li div:last-child span:hover{color:#4a98e7;}
+
+/*制版*/
+.platemaking-content { border-left: 1px solid #eee;border-top: 1px solid #eee; }
+.platemaking-content .tr-header{ background-color:#f6f6f6; }
+.platemaking-content .tr-header span:first-child{ float:left; display:inline-block; }
+.platemaking-content .tr-header .ico-dropdown{ margin-top:2px; }
+.platemaking-content td { border-bottom: 1px solid #eee; border-right: 1px solid #eee; }
+
+
+

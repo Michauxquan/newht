@@ -1,0 +1,65 @@
+﻿{
+    "Error": "",
+    "Item": {
+        "CategoryCode": {
+            "title": "类别编码",
+            "hide": false,
+            "format": false,
+            "exporttype": -1,
+			"testexporttype": -1,
+			"datasource":"",
+			"importtype":-1,
+			"importcolumn":"",		
+			"datatype":"string",
+			"defaulttext":"SZ001"
+        },
+		"CategoryName": {
+            "title": "类别名称",
+            "hide": false,
+            "format": false,
+            "exporttype": -1,
+			"testexporttype": -1,
+			"datasource":"",
+			"importtype":-1,
+			"importcolumn":"",		
+			"datatype":"string",
+			"defaulttext":"上装"
+        },
+        "PCode": {
+            "title": "上级类别编码",
+            "hide": false,
+            "format": false,
+            "exporttype": -1,
+			"testexporttype": -1,
+			"datasource":"",
+			"importtype":-1,
+			"importcolumn":"",		
+			"datatype":"string",
+			"defaulttext":""
+        },
+        "PName": {
+            "title": "上级类别名称",
+            "hide": false,
+            "format": true,
+            "exporttype": -1,
+			"testexporttype": -1,
+			"datasource":"",
+			"importtype":-1,
+			"importcolumn":"",		
+			"datatype":"string",
+			"defaulttext":""
+        }, 
+        "Status": {
+            "title": "是否启用",
+            "hide": false,
+            "format": true,
+            "exporttype": 20,
+			"testexporttype": -1,
+			"datasource":"",
+			"importtype":-1,
+			"importcolumn":"",		
+			"datatype":"int",
+			"defaulttext":"是"
+        }
+	}
+}

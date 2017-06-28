@@ -1,0 +1,40 @@
+﻿@{
+    ViewBag.Title = "客户登陆统计";
+}
+
+@section css{
+    <link href="/modules/plug/daterangepicker/daterangepicker.css" rel="stylesheet" />
+    }
+<style type="text/css">
+    .source-box { height:400px; }
+</style>
+
+@section scripts{
+    <script src="/modules/plug/laydate/laydate.js"></script>
+    <script type="text/javascript">
+        seajs.use(["scripts/report/clientsloginreport"], function (obj) {
+            obj.init();
+        });
+    </script>
+}
+<div class="header-box">
+    <span class="header-title left">工厂登陆统计</span>
+</div>
+<div class="search-box">
+    <div class="search-header">
+        <ul class="search-tab search-type">
+             <li data-id="clientsLoginRPT" data-type="1" class="hover">按日统计</li>           
+            <li data-id="clientsLoginRPT" data-type="2">按周统计</li>      
+             <li data-id="clientsLoginRPT" data-type="3">按月统计</li>     
+        </ul>
+    </div>
+</div>
+<div class="content-body">
+    <div class="left mBottom10">
+        <input type="text" id="rptBeginTime" placeholder="请选择时间段"  class="ipt-date" />
+    </div> 
+
+    <div id="clientsLoginRPT" class="source-box">
+
+    </div>
+</div>

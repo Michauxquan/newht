@@ -1,0 +1,19 @@
+﻿{%
+	for(var i=0, j=$data.length; i < j; i++){
+	var item = $data[i];
+%}
+<tr class="list-item">
+    <td class="name">{%=item.Email%}</td>
+    <td class="name">{%=item.NickName%}</td>
+    <td class='tLeft'>{%=item.TotalMoney%}</td>
+    <td class='tLeft'>{%=item.BankMoney%}</td>
+    <td class='tLeft'>{%=item.UserType==0?"会员":"代理"%}</td>
+    <td class='center'>{%=item.RegisterTime.toDate("yyyy-MM-dd hh:mm:ss")%}</td>
+    <td class='center'>{%=item.LastVisitTime.toDate("yyyy-MM-dd hh:mm:ss")%}</td>
+    <td class="name ">{%=(item.Role?item.Role.Name:"暂无角色")%}</td>
+    <td class="tLeft "><a class="btn-open-window"  data-url="/WebUser/UsersLog/{%=item.Uid%}" data-id="{%=item.Uid%}" data-name="登陆记录-{%=(item.NickName)%}">登陆记录</a></td>
+    <td class="center dropdown"  data-id="{%=item.Uid%}">
+        <span  class="ico-dropdown"></span>
+    </td>
+</tr>
+{% } %}

@@ -1,0 +1,19 @@
+﻿{%
+    var TypeName="";
+	for(var i=0, j=$data.length; i < j; i++){
+	var item = $data[i];
+%}
+    {% if(TypeName!=item.type){ %}
+    <tr class="mTop20 item-header">
+        <td class="font14 pLeft10 tLeft bold width150">类型：{%=item.type%}</td>
+        <td class="width150 tLeft bold">名称</td>                    
+        <td class="bold tLeft">描述</td> 
+    </tr>
+    {% TypeName=item.type } %}
+    
+    <tr class="list-item" id="tr-plate-{%=item.plateID%}">
+        <td class="tLeft item bBottom"><img style="width:30px;height:30px;" src="{%=item.Icon?item.icon:'/modules/images/img-noimg.png'%}" /></td>
+        <td class="tLeft item bBottom">{%=item.title%}</td>        
+        <td class="item bBottom tLeft" style="line-height:150%;word-break:break-all;">{%=item.remark%}</td> 
+    </tr>
+{% } %}

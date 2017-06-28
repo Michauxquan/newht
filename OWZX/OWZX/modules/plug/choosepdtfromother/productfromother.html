@@ -1,0 +1,16 @@
+﻿
+
+{%
+	for(var i=0, j=$data.length; i < j; i++){
+	var item = $data[i];
+%}
+    <li>
+        <span class="check ico-check mTop5" data-orderid="{%=item.orderID%}" data-pname="{%=item.goodsName%}" data-clientid="{%=item.clientID%}" 
+            data-categoryid="{%= item.categoryID %}" data-code="{%= item.intGoodsCode %}" data-price="{%= item.finalPrice %}"></span>
+        <span class="width100 long" title="{%=item.orderImage%}"><img style="width: 60px; height: 60px;" src="{%=item.orderImage%}"/></span>
+		<span class="name long" title="{%=item.goodsName%}">{%=item.goodsName%}</span>
+        <span class="width100 long">{%= item.intGoodsCode %}</span> 
+    <!--    <span class="width300 long" title="{%= item.finalPrice %}">{%= item.finalPrice %}</span>-->
+        <span class="width50 long"></span> 
+	</li>
+{% } %}

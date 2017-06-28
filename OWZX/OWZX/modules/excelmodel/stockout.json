@@ -1,0 +1,235 @@
+﻿{
+    "Error": "",
+    "Item": {	
+		"OrderCode": {
+            "title": "订单单号",
+            "hide": false,
+            "format": false,
+            "exporttype": -1,
+			"testexporttype": -1,
+			"datasource":"",
+			"importtype":-1,
+			"importcolumn":"",
+			"datatype":"string",
+			"defaulttext":"CESHI001"
+        },
+		"DocCode": {
+            "title": "出库单号",
+            "hide": false,
+            "format": false,
+            "exporttype": -1,
+			"testexporttype": -1,
+			"datasource":"",
+			"importtype":-1,
+			"importcolumn":"",
+			"datatype":"string",
+			"defaulttext":"CESHI001"
+        },	
+		"CreateUserName": {
+            "title": "收货人",
+            "hide": false,
+            "format": false,
+            "exporttype": -1,
+			"testexporttype": -1,
+			"datasource":"",
+			"importtype":-1,
+			"importcolumn":"CreateUserID",		
+			"datatype":"string",
+			"defaulttext":"1.0"
+        },
+		"Address": {
+            "title": "收货地址",
+            "hide": false,
+            "format": false,
+            "exporttype": -1,
+			"testexporttype": -1,
+			"datasource":"",
+			"importtype":-1,
+			"importcolumn":"",
+			"datatype":"string",
+			"defaulttext":"CESHI001"
+        },
+		"MobileTele": {
+            "title": "联系电话",
+            "hide": false,
+            "format": false,
+            "exporttype": -1,
+			"testexporttype": -1,
+			"datasource":"",
+			"importtype":-1,
+			"importcolumn":"",		
+			"datatype":"string",
+			"defaulttext":120
+        },	
+		"StatusStr":{  "title": "状态",
+            "hide": false,
+            "format": false,
+            "exporttype": -1,
+			"testexporttype": -1,
+			"datasource":"",
+			"importtype":-1,
+			"importcolumn":"status",		
+			"datatype":"int",
+			"defaulttext":"是"
+		},
+		"TotalMoney": {
+            "title": "总金额",
+            "hide": false,
+            "format": false,
+            "exporttype": -1,
+			"testexporttype": -1,
+			"datasource":"",
+			"importtype":-1,
+			"importcolumn":"",
+			"datatype":"decimal",
+			"defaulttext":"CESHI001"
+        },
+         
+		"ExpressID":{
+			"title": "快递公司",
+            "hide": false,
+            "format": false,
+            "exporttype": 10,
+			"testexporttype": 10,
+			"datasource":"",
+			"importtype":19,
+			"importcolumn":"",
+			"datatype":"string",
+			"defaulttext":"C:/Users/admin/Desktop/色卡.png"
+		},	
+		"ExpressCode":{
+			"title": "快递单号",
+            "hide": false,
+            "format": false,
+            "exporttype": -1,
+			"testexporttype": -1,
+			"datasource":"",
+			"importtype":-1,
+			"importcolumn":"",
+			"datatype":"string",
+			"defaulttext":"C:/Users/admin/Desktop/色卡.png"
+		},
+		"CreateTime":{  "title": "订货日期",
+            "hide": false,
+            "format": true,
+            "exporttype": 0,
+			"testexporttype": -1,
+			"datasource":"",
+			"importtype":-1,
+			"importcolumn":"",		
+			"datatype":"detetime",
+			"defaulttext":"是"
+		}，
+		"ProductCode": {
+            "title": "产品编码",
+            "hide": false,
+            "format": false,
+            "exporttype": -1,
+			"testexporttype": -1,
+			"datasource":"",
+			"importtype":-1,
+			"importcolumn":"",
+			"datatype":"string",
+			"defaulttext":"CESHI001"
+        },	
+        "ProductName": {
+            "title": "产品名称",
+            "hide": false,
+            "format": false,
+            "exporttype": -1,
+			"testexporttype": -1,
+			"datasource":"",
+			"importtype":-1,
+			"importcolumn":"",
+			"datatype":"string",
+			"defaulttext":"二当家--上海云销科技有限公司"
+        },  
+		"DetailsCode": {
+            "title": "规格编码",
+            "hide": false,
+            "format": false,
+            "exporttype": -1,
+			"testexporttype": -1,
+			"datasource":"",
+			"importtype":-1,
+			"importcolumn":"",
+			"datatype":"string",
+			"defaulttext":"可为空"
+        },
+		"DetailRemark": {
+            "title": "规格名称",
+            "hide": false,
+            "format": false,
+            "exporttype": -1,
+			"testexporttype": -1,
+			"datasource":"",
+			"importtype":-1,
+			"importcolumn":"",
+			"datatype":"string",
+			"defaulttext":"黑色 S"
+        },
+		  "UnitID": {
+            "title": "单位",
+            "hide": false,
+            "format": true,
+            "exporttype": 11,
+			"testexporttype": 7,
+			"datasource":"DropSourceList|5",
+			"importtype":12,
+			"importcolumn":"BrandID",			
+			"datatype":"string",
+			"defaulttext":"个"
+        },
+		"BatchCode": {
+            "title": "批次",
+            "hide": false,
+            "format": false,
+            "exporttype": -1,
+			"testexporttype": -1,
+			"datasource":"",
+			"importtype":-1,
+			"importcolumn":"",
+			"datatype":"string",
+			"defaulttext":"100"
+        },
+		"Quantity": {
+            "title": "数量",
+            "hide": false,
+            "format": false,
+            "exporttype": -1,
+			"testexporttype": -1,
+			"datasource":"",
+			"importtype":-1,
+			"importcolumn":"",
+			"datatype":"int",
+			"defaulttext":"100"
+        },
+        "DetailPrice": {
+            "title": "单价",
+            "hide": false,
+            "format": false,
+            "exporttype": -1,
+			"testexporttype": -1,
+			"datasource":"",
+			"importtype":-1,
+			"importcolumn":"Price",
+			"datatype":"decimal",
+			"defaulttext":"102.00"
+        },   
+        "DetailTotalMoney": {
+            "title": "小计",
+            "hide": false,
+            "format": false,
+            "exporttype": -1,
+			"testexporttype": -1,
+			"datasource":"",
+			"importtype":-1,
+			"importcolumn":"TotalMoney",		
+			"datatype":"decimal",
+			"defaulttext":"120.00"
+        }    
+        
+	
+			
+    } 
+}

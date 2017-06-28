@@ -1,0 +1,115 @@
+﻿@{
+    Layout = null;
+    OWZXEntity.Manage.M_Users CurrentUser = (OWZXEntity.Manage.M_Users)Session["ClientManager"];
+}
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>后台管理系统</title>
+    <meta name="robots" content="noindex,nofollow">
+    <link href="/modules/css/base.css" rel="stylesheet" />
+    <link href="/modules/css/index.css" rel="stylesheet" />
+    <link href="/modules/css/iconfont/iconfont.css" rel="stylesheet" />
+    <link rel="shortcut icon" href="/modules/images/logo_login.png">
+     <style>
+        #providerul li{padding: 0 20px;height: 25px;line-height: 25px !important;} 
+    </style>
+</head>
+<body>
+    <header>
+        <div class="company-logo left">
+            <img id="companyLogo" src="@(string.IsNullOrEmpty(CurrentUser.Avatar) ? "/modules/images/ico-home.png" : CurrentUser.Avatar)"/>
+            <div class="long" id="companyName" title="@CurrentUser.UserName">@CurrentUser.UserName</div>
+        </div>
+        <ul id="modulesMenu" class="menu left">
+            @foreach (OWZXEntity.Menu model in ExpandClass.GetChildMenuByCode(HttpContext.Current, ExpandClass.CLIENT_TOP_CODE))
+            { 
+                <li class="left" data-code="@(model.MenuCode)"> 
+                    <img class="ico" data-ico="@(model.IcoPath)" data-hover="@(model.IcoPath)" src="@(model.IcoPath)" /> 
+                    <span class="name">@(model.Name)</span>
+                    <span class="cursor"></span>
+                </li>
+            }
+             
+        </ul> 
+        
+        <div id="currentUser" class="currentuser right">
+            <span>
+                <img src="@(string.IsNullOrEmpty(CurrentUser.Avatar)?"/modules/images/defaultavatar.png":CurrentUser.Avatar)" class="avatar" />
+            </span>
+            <span class="username">
+                @(CurrentUser.UserName)
+            </span>
+            <span class="dropdown">
+                <span class="dropdown-top"></span>
+                <span class="dropdown-bottom"></span>
+            </span>
+        </div>
+    </header>
+
+    <nav id="leftNav">
+        
+    </nav>
+    <div class="main-content">
+        <div class="window-box">
+            <ul id="windowItems" class="window-items">
+                <li class="hover" data-id="Home" draggable="false"><i class="iconfont">&#xe62a;</i> 主页</li>
+            </ul>
+            @*左滑动*@
+            <div class="left-btn">
+                <span></span>
+            </div>
+            @*右滑动*@
+            <div class="right-btn">
+                <span></span>
+            </div>
+        </div>
+        <div id="iframeBox" class="iframe-box">
+            <iframe id="iframeHome" class="iframe-window" src="/Default/Home"></iframe>
+        </div>
+    </div>
+
+    @*<div class="feedback">意见反馈</div>*@
+    <input id="feedback-filepath" type="hidden" /> 
+
+    <ul class="help-feedback">
+        <li class="ico-help" title="白水非凡微信公众号"></li>
+        <li class="ico-contact" title="联系我们"><a target="_blank" href="http://localhost:8888/"></a></li> 
+        <li class="ico-open" title="展开"></li>
+    </ul>
+    
+    <div class="wechat">
+        <div class="lump"></div>
+        <img src="/modules/images/wx-code.jpg" />
+    </div> 
+    @*点击头像展开下拉列表*@
+    <div class="dropdown-userinfo hide">
+        <div class="top-lump"></div>
+        <ul class="items-list"> 
+            <li class="item"><a href="/Home/Logout">安全退出</a></li>
+        </ul>
+    </div> 
+
+    <ul class="dropdown-ul hide" id="contentMenu"  style="width:120px;">
+        <li id="refreshThis">刷新窗口</li>
+        <li id="closeThis">关闭窗口</li>
+        <li id="closeOthers">关闭其他窗口</li>
+        <li id="closeAll">关闭所有窗口</li>
+    </ul>
+    
+    <script type="text/javascript" src="/Scripts/sea.js"></script>
+    <script type="text/javascript" src="/Scripts/sea-config.js?v=@(ExpandClass.Version)"></script>
+    <script type="text/javascript">
+        seajs.use(["scripts/index"], function(layout) {
+            layout.init('@ViewBag.Herf', '@ViewBag.RemainDay','@ViewBag.RemainDate');
+        });
+    </script>
+ 
+</body>
+</html>
+
+
+
+
+
