@@ -79,7 +79,7 @@ define(function (require, exports, module) {
                     $(".registerErr").html("账号或密码有误,您还有" + (6 - parseInt(data.errorCount)) + "错误机会").slideDown();
                 }
                 else if (data.result == 4) {
-                    $(".registerErr").html(data.errinfo).slideDown();
+                    $(".registerErr").html(data.errorinfo).slideDown();
                 }
                 else if (data.result == -1) {
                     $(".registerErr").html("账号已冻结，请" + data.forbidTime + "分钟后再试").slideDown();
